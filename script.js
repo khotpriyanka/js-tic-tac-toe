@@ -1,5 +1,7 @@
 const X_CLASS = 'x'
 const CIRCLE_CLASS = 'circle'
+
+// Winning combinations in tic tac toe
 const WINNING_COMBINATIONS = [
   [0, 1, 2],
   [3, 4, 5],
@@ -17,6 +19,8 @@ const restartButton = document.getElementById('restartButton')
 const winningMessageTextElement = document.querySelector('[data-winning-message-text]')
 let circleTurn
 
+
+// Game Initialization
 startGame()
 
 restartButton.addEventListener('click', startGame)
