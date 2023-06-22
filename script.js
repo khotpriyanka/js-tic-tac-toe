@@ -60,6 +60,8 @@ function endGame(draw) {
   winningMessageElement.classList.add('show')
 }
 
+
+
 function isDraw() {
   return [...cellElements].every(cell => {
     return cell.classList.contains(X_CLASS) || cell.classList.contains(CIRCLE_CLASS)
@@ -74,6 +76,7 @@ function swapTurns() {
   circleTurn = !circleTurn
 }
 
+// Function to set the hover class on the game board
 function setBoardHoverClass() {
   board.classList.remove(X_CLASS)
   board.classList.remove(CIRCLE_CLASS)
@@ -84,6 +87,7 @@ function setBoardHoverClass() {
   }
 }
 
+// Function to check if a player has won the game
 function checkWin(currentClass) {
   return WINNING_COMBINATIONS.some(combination => {
     return combination.every(index => {
